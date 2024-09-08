@@ -2,10 +2,10 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="./assets/jquery-3.7.1.slim.js"></script>
+    <script type="text/javascript" src="./assets/scripts/jquery-3.7.1.slim.js"></script>
     <link rel="stylesheet" href="./assets/style/bulma.css"> <!-- Подключили стили bulma-->
     <link rel="stylesheet" href="./assets/fontawesome/css/all.css">
-    <script type="text/javascript" src="./assets/scripts/main.js"> </script>
+    <script defer type="text/javascript" src="./assets/scripts/main.js"> </script>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="./assets/image/tebeshka.ico">
     </link>
@@ -16,9 +16,14 @@
         <nav class="navbar"> <!-- Секция навигаций-->
             <div class="navbar-menu"><!-- Секция меню-->
                 <div class="navbar-start"> <!-- Левое меню-->
-                    <a class="navbar-item" href="#"><i class="fas fa-viruses"></i> Главная</a> <!-- Элемент меню-->
-                    <a class="navbar-item" href="#"> Информация</a> <!-- Элемент меню-->
-                    <a class="navbar-item" href="#">Проекты</a> <!-- Элемент меню-->
+                    <a class="navbar-item" href="#"><i class="fas fa-viruses"></i>Home</a> <!-- Элемент меню-->
+                    <a class="navbar-item" href="#">Information</a> <!-- Элемент меню-->
+                    <a class="navbar-item" href="#">Projects</a> <!-- Элемент меню-->
+                </div>
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <button id="registration-btn" class="js-modal-trigger">Registrate</button>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -65,35 +70,38 @@
                 </div>
             </div>
         </div>
-        <div class="block">
-            <div class="columns">
-                <div class="column"></div>
-                <div class="column is-one-third">
-                    <div class="content is-normal">
-                        <h1>Registration</h1>
+    </div>
+    <div id="registration-modal" class="modal">
+        <div class="modal-background">
+        </div>
+        <div class="modal-content">
+            <div class="box">
+                <div class="content is-normal">
+                    <h1>Registration</h1>
+                </div>
+                <form>
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <div class="control">
+                            <input name="name" class="input" type="text" placeholder="For examle madao-madao">
+                        </div>
                     </div>
-                    <form>
-                        <div class="field">
-                            <label class="label">Name</label>
-                            <div class="control">
-                                <input name="name" class="input" type="text" placeholder="For examle madao-madao">
-                            </div>
+                    <div class="field">
+                        <label class="label">Login</label>
+                        <div class="control">
+                            <input name="Login" class="input" type="text" placeholder="For examle madaochi">
                         </div>
-                        <div class="field">
-                            <label class="label">Login</label>
-                            <div class="control">
-                                <input name="Login" class="input" type="text" placeholder="For examle madaochi">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">Password</label>
+                    </div>
+                    <div class="field">
+                        <label class="label">Password</label>
+                        <div class="control">
                             <input name="password" class="input" type="password" placeholder="Password">
                         </div>
-                        <button class="button is-Registration is-dark">Register</button>
-                    </form>
-                </div>
-                <div class="column"></div>
+                    </div>
+                    <button class="button is-Registration is-dark">Registration</button>
+                </form>
             </div>
+            <button id="close-xmark" class="modal-close is-large" aria-label="close"></button>
         </div>
     </div>
 </body>
